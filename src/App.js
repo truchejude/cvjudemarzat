@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import goise from './main-dessin-illustration-du-concept-individualite/goose.png'
 import Crawl from './react-star-wars-crawl/Crawl'
+import Maze from './maze/maze'
 import 'react-star-wars-crawl/lib/index.css'
 
 function App() {
@@ -129,16 +130,38 @@ function App() {
     return (
       <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h2>comment j'en suis arrivé là?</h2>
-        <p onClick={() => setStarwars(!starwars)} style={{cursor: 'pointer', color: '#11dbfc' }}>Il n'y a pas si longtemps sur une planète pas plus proche que la nôtre...</p>
+        <p onClick={() => setStarwars(!starwars)} style={{ cursor: 'pointer', color: '#11dbfc' }}>Il n'y a pas si longtemps sur une planète pas plus proche que la nôtre...</p>
         {starwars && <Crawl title="Episode IV" subTitle="Un nouvel espoir" text>
-            <p>C'est une époque de confinement. À bord d'une maison terrienne opérant à partir de la wifi, Jude a remporté le droit d'étudier à Epitech, sa première victoire sur le... Il n'y a pas de méchant... désolé.</p>
-            <p>À peine le temps de respirer que c'est déjà la rentrée. La fameuse piscine d'Epitech est déjà lancée, Jude n'a plus qu'à apprendre les différents langages secrets de l'Empire de la programmation : le langage bas niveau C. Un appartement terrien doté d'une wifi assez puissante pour push sur GitHub et ses amis l'aidera dans sa quête.</p>
-            <p>Poursuivi par sa volonté de réussir, il parviendra à vaincre différents projets d'Epitech comme le Dantes Star où il faut créer et résoudre des labyrinthes, projet très sympathique que j'ai refait plus bas sur la game julio... OU BIEN D'AUTRES! encore plus machiavéliques comme un Bomberman en multijoueur. Celui-là aussi c'était sympathique, en plus je l'ai fait en multijoueur en ligne pour flex, ha ha le bon temps. EN PARLANT DE TEMPS, nous sommes bientôt en fin de tech 4, est-ce que Jude trouvera un stage à temps ?</p>
+          <p>C'est une époque de confinement. À bord d'une maison terrienne opérant à partir de la wifi, Jude a remporté le droit d'étudier à Epitech, sa première victoire sur le... Il n'y a pas de méchant... désolé.</p>
+          <p>À peine le temps de respirer que c'est déjà la rentrée. La fameuse piscine d'Epitech est déjà lancée, Jude n'a plus qu'à apprendre les différents langages secrets de l'Empire de la programmation : le langage bas niveau C. Un appartement terrien doté d'une wifi assez puissante pour push sur GitHub et ses amis l'aidera dans sa quête.</p>
+          <p>Poursuivi par sa volonté de réussir, il parviendra à vaincre différents projets d'Epitech comme le Dantes Star où il faut créer et résoudre des labyrinthes, projet très sympathique que j'ai refait plus bas sur la game julio... OU BIEN D'AUTRES! encore plus machiavéliques comme un Bomberman en multijoueur. Celui-là aussi c'était sympathique, en plus je l'ai fait en multijoueur en ligne pour flex, ha ha le bon temps. EN PARLANT DE TEMPS, nous sommes bientôt en fin de tech 4, est-ce que Jude trouvera un stage à temps ?</p>
         </Crawl>}
       </section>
     )
   }
 
+  function JudeBoy() {
+    return (
+      <section style={{ display: 'flex', flexWrap: 'wrap', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ maxWidth: '500px', width: '40vw', minWidth: '300px' }}>
+          <h1>WOW La Game jude</h1>
+          <p>C'est vrai qu'elle est petite, seuls les tyrannosaures peuvent appuyer sur les boutons.</p>
+          <p>Heureusement, l'écran est tactile, ça a sauvé plus d'une partie de labyrinthe serpent.</p>
+          <p>Comment ça, tu ne vois pas le serpent ? Tu veux que je te dise quoi d'autre ?</p>
+        </div>
+        <div style={{ maxWidth: '500px', width: '40vw', minWidth: '300px', justifyContent: 'center', alignItems: 'flex-start', display: 'flex' }}>
+          <div>
+            <div style={{ position: 'relative', top: `${265 * 350 / 500}px`, left: `${185 * 350 / 500}px` }}>
+              <Maze rows={19} cols={19} height={100 * 350 / 500} wight={100 * 350 / 500} />
+            </div>
+            <img style={{ width: '350px', zIndex: '1000' }} src="https://i.ibb.co/2v8yZSJ/judeBoy.png" alt="judeBoy" border="0" />
+          </div>
+        </div>
+      </section>
+    )
+  }
+  //  <img src="https://i.ibb.co/n8x85VM/autruchC.png" alt="autruchC" border="0" />
+  //  <img src="https://i.ibb.co/mbx4vWx/autruche-fort.png" alt="autruche-fort" border="0" />
   return (
     <div style={{ zIndex: '0' }} className="App">
       <BareDuTop />
@@ -151,6 +174,7 @@ function App() {
       <Langage />
       <MonEquip />
       <CommentJenSuisArriverLa />
+      <JudeBoy />
       <footer>
         <p>merci d'avoie regarder mon sit cv c'est la version 1.00 du sit il est loing d'étre terminer</p>
         <p>merci a rdubrock pour react-star-wars-crawl tout simple mais super bien https://github.com/rdubrock/react-star-wars-crawl/tree/master</p>
