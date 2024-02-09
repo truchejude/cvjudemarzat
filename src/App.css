@@ -1,0 +1,189 @@
+@font-face {
+  font-family: 'Jellee Bold';
+  src: url('./fonts/Jellee-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Jellee Bold', sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #000;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  animation: blink 2s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.App-header {
+  color: #ff0;
+  font-size: calc(10px + 2vmin);
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+h1,
+h2,
+p {
+  color: #ff0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.langage {
+  width: 100%;
+  height: 250px;
+  border-bottom: 1px solid #ff0;
+  border-top: 1px solid #ff0;
+}
+
+.card-equip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 450px;
+  width: 300px;
+  border: 1px solid #ff0;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+}
+
+.cadre-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 10px;
+  background-image: url('./main-dessin-illustration-du-concept-individualite/07b305e5e03ba7f5660ee3f5d79f154f.gif');
+  background-size: cover;
+  /* Ajuste la taille du GIF pour remplir complètement la div */
+  background-repeat: no-repeat;
+  /* Empêche la répétition du GIF */
+  background-position: center;
+  /* Centre le GIF dans la div */
+}
+
+.mon-equip {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 70px;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+.circle-carousel-container {
+  position: relative;
+  width: 200px;
+  /* Ajustez la taille du conteneur */
+  height: 200px;
+  /* Ajustez la taille du conteneur */
+}
+
+.circle-carousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  /* Initialise la rotation */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  animation: rotateCarousel 10s linear infinite;
+  /* Animation de rotation */
+}
+
+.carousel-image {
+  width: 50px;
+  /* Ajustez la taille des images */
+  height: 50px;
+  /* Ajustez la taille des images */
+  object-fit: cover;
+  border-radius: 50%;
+  /* Afficher les images en cercle */
+}
+
+@keyframes rotateCarousel {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.langage {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.rotating-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 25s linear infinite;
+  margin: 450px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.starwarstext h1 {
+  font-size: 50px;
+}
+
+.starwarstext {
+  min-width: 300px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
