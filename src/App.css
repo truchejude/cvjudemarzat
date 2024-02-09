@@ -181,8 +181,6 @@ h2 {
 }
 
 .starwarstext {
-  min-width: 300px;
-  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
