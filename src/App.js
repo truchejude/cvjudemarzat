@@ -74,6 +74,7 @@ function App() {
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
               const imageSize = 200
+              const rotation = (angle + Math.PI / 2) * (180 / Math.PI);
               return (
                 <img
                   key={index}
@@ -86,6 +87,7 @@ function App() {
                     top: `calc(50% - ${imageSize / 2}px + ${y}px)`,
                     left: `calc(50% - ${imageSize / 2}px + ${x}px)`,
                     borderRadius: '50%',
+                    transform: `rotate(${rotation}deg)`,
                   }}
                 />
               );
@@ -98,7 +100,7 @@ function App() {
     return (
       <section className='langage'>
         <div className='rotating-div' >
-          <CircleImageGallery images={[goise, goise, goise, goise, goise, goise, goise]} />
+          <CircleImageGallery images={["/logo512.png", "/ico/python.png", "/ico/linux.png", "/ico/c.png", "/ico/cpp.png", "/ico/css.svg", "/ico/docker.png", "/ico/github.png", "/ico/html.png", "/ico/java scrypt.png"]} />
         </div>
       </section>
     )
