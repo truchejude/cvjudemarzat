@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import goise from './main-dessin-illustration-du-concept-individualite/goose.png'
 import Crawl from './react-star-wars-crawl/Crawl'
@@ -28,10 +28,8 @@ function App() {
       }, starSpeed);
     }
 
-    // Créer une étoile toutes les secondes
     const interval = setInterval(createStar, starCreation);
 
-    // Nettoyage de l'intervalle lors du démontage du composant
     return () => clearInterval(interval);
   }, []);
 
@@ -42,7 +40,6 @@ function App() {
           <h1>Jude</h1>
           <img style={{ height: '200px' }} alt='logo avec deux oie' src={goise} />
           <h1>Marzat</h1>
-          {/* Contenu de votre CV */}
         </section>
       </header>
     )
@@ -68,9 +65,8 @@ function App() {
             }}
           >
             {images.map((image, index) => {
-              // Calcule les coordonnées polaires pour placer les images autour du cercle
               const angle = index * angleStep;
-              const radius = 480; // Rayon du cercle
+              const radius = 480;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
               const imageSize = 200
@@ -82,11 +78,9 @@ function App() {
                   alt={`${image}`}
                   style={{
                     position: 'absolute',
-                    width: `${imageSize}px`,
                     height: `${imageSize}px`,
                     top: `calc(50% - ${imageSize / 2}px + ${y}px)`,
                     left: `calc(50% - ${imageSize / 2}px + ${x}px)`,
-                    borderRadius: '50%',
                     transform: `rotate(${rotation}deg)`,
                   }}
                 />
@@ -130,16 +124,17 @@ function App() {
   }
 
   function CommentJenSuisArriverLa() {
+    const [starwars, setStarwars] = useState(false)
 
     return (
       <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h2>comment j'en suis arrivé là?</h2>
-        <p style={{ color: '#11dbfc' }}>Il n'y a pas si longtemps sur une planète pas plus proche que la nôtre...</p>
-        <Crawl title="Episode IV" subTitle="Un nouvel espoir" text>
+        <p onClick={() => setStarwars(!starwars)} style={{cursor: 'pointer', color: '#11dbfc' }}>Il n'y a pas si longtemps sur une planète pas plus proche que la nôtre...</p>
+        {starwars && <Crawl title="Episode IV" subTitle="Un nouvel espoir" text>
             <p>C'est une époque de confinement. À bord d'une maison terrienne opérant à partir de la wifi, Jude a remporté le droit d'étudier à Epitech, sa première victoire sur le... Il n'y a pas de méchant... désolé.</p>
             <p>À peine le temps de respirer que c'est déjà la rentrée. La fameuse piscine d'Epitech est déjà lancée, Jude n'a plus qu'à apprendre les différents langages secrets de l'Empire de la programmation : le langage bas niveau C. Un appartement terrien doté d'une wifi assez puissante pour push sur GitHub et ses amis l'aidera dans sa quête.</p>
             <p>Poursuivi par sa volonté de réussir, il parviendra à vaincre différents projets d'Epitech comme le Dantes Star où il faut créer et résoudre des labyrinthes, projet très sympathique que j'ai refait plus bas sur la game julio... OU BIEN D'AUTRES! encore plus machiavéliques comme un Bomberman en multijoueur. Celui-là aussi c'était sympathique, en plus je l'ai fait en multijoueur en ligne pour flex, ha ha le bon temps. EN PARLANT DE TEMPS, nous sommes bientôt en fin de tech 4, est-ce que Jude trouvera un stage à temps ?</p>
-        </Crawl>
+        </Crawl>}
       </section>
     )
   }
