@@ -181,8 +181,8 @@ function App() {
   //  <img src="https://i.ibb.co/mbx4vWx/autruche-fort.png" alt="autruche-fort" border="0" />
   return (
     <div style={{ zIndex: '0' }} className="App">
-      <div className='decoration-vesso' style={{ position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', pointerEvents: 'none' }}>
-        <div style={{ position: 'fixed', bottom: '0px', right: '50px' }}>
+      <div className='decoration-vesso'>
+        <div style={{ position: 'fixed', bottom: '10%', right: '16%' }}>
           <SilverHawk />
         </div>
       </div>

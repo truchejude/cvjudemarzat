@@ -96,11 +96,31 @@ li {
 .decoration-vesso {
   z-index: 10000000;
   background-image: url('./veseaux spatial.png');
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
 }
 
+
+@media (max-width: 1000px) {
+  .decoration-vesso {
+    z-index: 10000000;
+    background-image: url('./astronote.png');
+    background-size: 100% 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+}
 .mon-equip {
   display: flex;
   align-items: center;
