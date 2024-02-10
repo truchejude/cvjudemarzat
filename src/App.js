@@ -15,7 +15,7 @@ function App() {
       const star = document.createElement('div');
       star.classList.add('star');
 
-      star.style.left = `${Math.random() * window.innerWidth + window.scrollX}px`;
+      star.style.left = `${Math.random() * (window.innerWidth - 5)}px`;
       star.style.top = `${Math.random() * window.innerHeight + window.scrollY}px`;
       function randomBrightColor() {
         //                  jaune       vert      bleu        violet      rouge sa mére
@@ -155,7 +155,7 @@ function App() {
     const [zoom, setZoom] = useState(1)
 
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', overflow: 'hidden'}}>
         <h2>serpent labyrinthe</h2>
         <section style={{ display: 'flex', flexWrap: 'wrap', width: '100%', justifyContent: 'center', alignItems: 'center' }}>
           <div style={{ maxWidth: '500px', width: '40vw', minWidth: '300px' }}>
@@ -200,6 +200,9 @@ function App() {
       <footer>
         <p>merci d'avoie regarder mon sit cv c'est la version 1.00 du sit il est loing d'étre terminer</p>
         <p>merci a rdubrock pour react-star-wars-crawl tout simple mais super bien https://github.com/rdubrock/react-star-wars-crawl/tree/master</p>
+        <div className='pc-d' style={{height: '300px'}}>
+
+        </div>
       </footer>
     </div>
   );
