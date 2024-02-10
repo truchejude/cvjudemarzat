@@ -185,3 +185,11 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
+
+button {
+  color: #ff0;
+  border: 1px solid #ff0;
+  background-color: transparent;
+  font-size: 20px;
+  border-radius: 5px;
+}
