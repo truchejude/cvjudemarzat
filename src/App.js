@@ -4,6 +4,7 @@ import goise from './main-dessin-illustration-du-concept-individualite/goose.png
 import Crawl from './react-star-wars-crawl/Crawl'
 import Maze from './maze/maze'
 import 'react-star-wars-crawl/lib/index.css'
+import SilverHawk from './model/SilverHawk'
 
 function App() {
   const starSpeed = 2000
@@ -162,7 +163,11 @@ function App() {
             <p>C'est vrai qu'elle est petite, y'a que les tyrannosaures qui peuvent appuyer sur les boutons.</p>
             <p>Heureusement, l'écran est tactile, ça a sauvé plus d'une partie de serpent labyrinthe.</p>
             <p>Comment ça, tu ne vois pas le serpent ? Bha Zoom tu veux que je te dise quoi d'autre?</p>
+            <p>tu conais G-darius? j'aime beaucoup de jeux</p>
             <button onClick={() => setZoom(zoom + 0.1)}>Zoomer</button>
+            <div style={{position: 'relative', top: '-130px', left: '50px'}}>
+              <SilverHawk />
+            </div>
           </div>
           <div style={{ maxWidth: '500px', width: '40vw', minWidth: '300px', justifyContent: 'center', alignItems: 'flex-start', display: 'flex' }}>
             <div>
