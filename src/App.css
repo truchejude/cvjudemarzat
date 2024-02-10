@@ -89,11 +89,16 @@ li {
   margin: 10px;
   background-image: url('./main-dessin-illustration-du-concept-individualite/07b305e5e03ba7f5660ee3f5d79f154f.gif');
   background-size: cover;
-  /* Ajuste la taille du GIF pour remplir complètement la div */
   background-repeat: no-repeat;
-  /* Empêche la répétition du GIF */
   background-position: center;
-  /* Centre le GIF dans la div */
+}
+
+.decoration-vesso {
+  z-index: 10000000;
+  background-image: url('./veseaux spatial.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .mon-equip {
